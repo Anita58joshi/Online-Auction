@@ -2,13 +2,17 @@ package com.nepalaya.onlineauction.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.nepalaya.onlineauction.model.enums.GenderType;
+import lombok.*;
 
-import javax.persistence.Column;
-import javax.persistence.EnumType;
-import javax.persistence.Enumerated;
+import javax.persistence.*;
 
-
-public class User {
+@Entity
+@Table(name = "users")
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+public class User extends BaseEntity<User> {
     @Column(length = 150, name = "FIRSTNAME", nullable = false)
     private String firstName;
 
@@ -42,8 +46,8 @@ public class User {
     @JsonIgnore
     @Column(length = 150, name = "PASSWORD", nullable = false)
     private String password;
-
-
+    @Id
+    private Long id;
 
 
 
