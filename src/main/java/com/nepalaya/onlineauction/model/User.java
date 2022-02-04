@@ -8,11 +8,13 @@ import javax.persistence.*;
 
 @Entity
 @Table(name = "users")
+@Builder
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
 public class User extends BaseEntity<User> {
+
     @Column(length = 150, name = "FIRSTNAME", nullable = false)
     private String firstName;
 
@@ -46,9 +48,21 @@ public class User extends BaseEntity<User> {
     @JsonIgnore
     @Column(length = 150, name = "PASSWORD", nullable = false)
     private String password;
-    @Id
-    private Long id;
 
 
-
+    public String getFullName(){
+        StringBuilder fullName = new StringBuilder();
+        if(firstName != null){
+            fullName.append(firstName);
+            fullName.append(" ");
+        }
+        if(middleName != null){
+            fullName.append(middleName);
+            fullName.append(" ");
+        }
+        if(lastName != null){
+            fullName.append(lastName);
+        }
+        return fullName.toString();
+    }
 }
