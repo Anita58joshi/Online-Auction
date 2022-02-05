@@ -1,7 +1,6 @@
 package com.nepalaya.onlineauction.model;
 
 
-
 import lombok.*;
 
 import javax.persistence.*;
@@ -13,7 +12,7 @@ import javax.persistence.*;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class Product extends BaseEntity<User>{
+public class Product extends BaseEntity<User> {
 
 //    ProductID INTEGER PRIMARY KEY,
 //    ProductName varchar(255) NOT NULL,
@@ -42,8 +41,7 @@ public class Product extends BaseEntity<User>{
     @Column(length = 150, name = "IMAGE", nullable = false)
     private String image;
 
-
-    private Long sellerid;
-
+    @Column(name = "SELLER_ID", length = 25)
+    private Long sellerId;
 
 }

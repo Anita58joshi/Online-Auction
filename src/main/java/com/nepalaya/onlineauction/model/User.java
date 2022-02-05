@@ -5,6 +5,7 @@ import com.nepalaya.onlineauction.model.enums.GenderType;
 import lombok.*;
 
 import javax.persistence.*;
+import java.time.LocalDate;
 
 @Entity
 @Table(name = "users")
@@ -31,7 +32,7 @@ public class User extends BaseEntity<User> {
     @Column(length = 150, name = "ADDRESS", nullable = false)
     private String address;
 
-    @JsonIgnore
+
     @Column(length = 20, name = "CONTACT_NO", nullable = false)
     private String contactNo;
 
@@ -41,7 +42,7 @@ public class User extends BaseEntity<User> {
     @Column(name = "WALLET", nullable = false)
     private Double wallet;
 
-    @JsonIgnore
+
     @Column(length = 150, name = "EMAIL_ADDRESS", nullable = false)
     private String emailAddress;
 
@@ -49,18 +50,20 @@ public class User extends BaseEntity<User> {
     @Column(length = 150, name = "PASSWORD", nullable = false)
     private String password;
 
+    @Column(length = 150, name = "CREATED_ON", nullable = false, columnDefinition = "date")
+    private LocalDate createdOn;
 
-    public String getFullName(){
+    public String getFullName() {
         StringBuilder fullName = new StringBuilder();
-        if(firstName != null){
+        if (firstName != null) {
             fullName.append(firstName);
             fullName.append(" ");
         }
-        if(middleName != null){
+        if (middleName != null) {
             fullName.append(middleName);
             fullName.append(" ");
         }
-        if(lastName != null){
+        if (lastName != null) {
             fullName.append(lastName);
         }
         return fullName.toString();
