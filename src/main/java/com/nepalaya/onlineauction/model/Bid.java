@@ -13,7 +13,7 @@ import javax.persistence.*;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class Bid extends BaseEntity<User>{
+public class Bid extends BaseEntity<User> {
 //    BidID INTEGER PRIMARY KEY,
 //    BidderID INTEGER NOT NULL references OnlineAuctionDB.Usertable(UserID),
 //    BidProductID INTEGER NOT NULL references OnlineAuctionDB.Product(ProductID),
@@ -32,7 +32,6 @@ public class Bid extends BaseEntity<User>{
     @Column(name = "BID_STATUS", nullable = false)
     @Enumerated(EnumType.STRING)
     private BidStatus bidStatus;
-
 
 
 }
