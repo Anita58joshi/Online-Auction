@@ -50,8 +50,6 @@ public class User extends BaseEntity<User> {
     @Column(length = 150, name = "PASSWORD", nullable = false)
     private String password;
 
-    @Column(length = 150, name = "CREATED_ON", nullable = false, columnDefinition = "date")
-    private LocalDate createdOn;
 
     public String getFullName() {
         StringBuilder fullName = new StringBuilder();
