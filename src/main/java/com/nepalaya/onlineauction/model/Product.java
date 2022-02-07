@@ -38,7 +38,7 @@ public class Product extends BaseEntity<User> {
     @Column(length = 150, name = "QUANTITY", nullable = false)
     private Integer quantity;
 
-    @Column(length = 150, name = "IMAGE", nullable = false)
+    @Column(length = 150, name = "IMAGE")
     private String image;
 
     @Column(name = "SELLER_ID", length = 25)

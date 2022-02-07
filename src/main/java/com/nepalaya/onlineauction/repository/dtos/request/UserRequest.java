@@ -1,4 +1,4 @@
-package com.nepalaya.onlineauction.repository.dtos;
+package com.nepalaya.onlineauction.repository.dtos.request;
 
 import com.nepalaya.onlineauction.model.enums.GenderType;
 

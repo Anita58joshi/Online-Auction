@@ -1,15 +1,15 @@
-package com.nepalaya.onlineauction.services;
+package com.nepalaya.onlineauction.services.impl;
 
 import com.nepalaya.onlineauction.model.User;
 import com.nepalaya.onlineauction.model.enums.RegistrationStatus;
 import com.nepalaya.onlineauction.repository.UserRepository;
 import com.nepalaya.onlineauction.repository.dtos.Auth;
 import com.nepalaya.onlineauction.repository.dtos.UserRegistrationResponse;
-import com.nepalaya.onlineauction.repository.dtos.UserRequest;
+import com.nepalaya.onlineauction.repository.dtos.request.UserRequest;
+import com.nepalaya.onlineauction.services.UserService;
 import org.springframework.stereotype.Component;
 
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
