@@ -1,7 +1,7 @@
 package com.nepalaya.onlineauction.repository.bean;
 
 import com.nepalaya.onlineauction.model.User;
-import com.nepalaya.onlineauction.repository.UserRepository;
+import com.nepalaya.onlineauction.repository.api.UserRepository;
 import org.springframework.data.domain.Example;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;

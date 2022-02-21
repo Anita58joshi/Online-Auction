@@ -1,4 +1,4 @@
-package com.nepalaya.onlineauction.repository;
+package com.nepalaya.onlineauction.repository.api;
 
 import com.nepalaya.onlineauction.model.Product;
 import org.springframework.data.jpa.repository.JpaRepository;

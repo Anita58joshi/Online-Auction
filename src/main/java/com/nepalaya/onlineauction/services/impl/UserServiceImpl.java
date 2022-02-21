@@ -2,11 +2,11 @@ package com.nepalaya.onlineauction.services.impl;
 
 import com.nepalaya.onlineauction.model.User;
 import com.nepalaya.onlineauction.model.enums.RegistrationStatus;
-import com.nepalaya.onlineauction.repository.UserRepository;
+import com.nepalaya.onlineauction.repository.api.UserRepository;
 import com.nepalaya.onlineauction.repository.dtos.Auth;
 import com.nepalaya.onlineauction.repository.dtos.UserRegistrationResponse;
 import com.nepalaya.onlineauction.repository.dtos.request.UserRequest;
-import com.nepalaya.onlineauction.services.UserService;
+import com.nepalaya.onlineauction.services.api.UserService;
 import org.springframework.stereotype.Component;
 
 import java.time.LocalDate;
@@ -58,12 +58,18 @@ public class UserServiceImpl implements UserService {
             User user = this.toUser(request);
             System.out.println(user.getCreatedOn());
             this.repository.save(user);
+
         } catch (Exception e) {
             response.setStatus(RegistrationStatus.FAILED.name());
             return response;
         }
+        this.processSendEmail(request);
         response.setStatus(RegistrationStatus.SUCCESS.name());
         return response;
+    }
+
+    private void processSendEmail(UserRequest request) {
+
     }
 
     private User toUser(UserRequest request) {

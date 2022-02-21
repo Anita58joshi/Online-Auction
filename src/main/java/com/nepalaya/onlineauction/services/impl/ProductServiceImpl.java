@@ -2,11 +2,11 @@ package com.nepalaya.onlineauction.services.impl;
 
 import com.nepalaya.onlineauction.builder.ResponseBuilder;
 import com.nepalaya.onlineauction.model.Product;
-import com.nepalaya.onlineauction.repository.ProductRepository;
+import com.nepalaya.onlineauction.repository.api.ProductRepository;
 import com.nepalaya.onlineauction.repository.dtos.Response;
 import com.nepalaya.onlineauction.repository.dtos.request.ProductRequest;
 import com.nepalaya.onlineauction.repository.dtos.response.ProductResponse;
-import com.nepalaya.onlineauction.services.ProductService;
+import com.nepalaya.onlineauction.services.api.ProductService;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;

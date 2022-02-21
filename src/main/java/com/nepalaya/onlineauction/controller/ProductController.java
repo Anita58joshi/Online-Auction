@@ -2,7 +2,7 @@ package com.nepalaya.onlineauction.controller;
 
 import com.nepalaya.onlineauction.repository.dtos.Response;
 import com.nepalaya.onlineauction.repository.dtos.request.ProductRequest;
-import com.nepalaya.onlineauction.services.ProductService;
+import com.nepalaya.onlineauction.services.api.ProductService;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;

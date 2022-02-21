@@ -2,7 +2,7 @@ package com.nepalaya.onlineauction.repository.bean;
 
 
 import com.nepalaya.onlineauction.model.Product;
-import com.nepalaya.onlineauction.repository.ProductRepository;
+import com.nepalaya.onlineauction.repository.api.ProductRepository;
 import org.springframework.data.domain.Example;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;

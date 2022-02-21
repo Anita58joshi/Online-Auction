@@ -1,4 +1,4 @@
-package com.nepalaya.onlineauction.services;
+package com.nepalaya.onlineauction.services.api;
 
 import com.nepalaya.onlineauction.model.User;
 import com.nepalaya.onlineauction.repository.dtos.Auth;

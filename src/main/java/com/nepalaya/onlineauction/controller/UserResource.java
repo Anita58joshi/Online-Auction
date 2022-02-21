@@ -4,7 +4,7 @@ import com.nepalaya.onlineauction.model.User;
 import com.nepalaya.onlineauction.repository.dtos.Auth;
 import com.nepalaya.onlineauction.repository.dtos.UserRegistrationResponse;
 import com.nepalaya.onlineauction.repository.dtos.request.UserRequest;
-import com.nepalaya.onlineauction.services.UserService;
+import com.nepalaya.onlineauction.services.api.UserService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
